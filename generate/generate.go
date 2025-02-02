@@ -88,10 +88,11 @@ func Do(in *plugin.Plugin, filename string) error {
 }
 
 func primitiveType(tp string) (string, bool) {
+	// 将 uint64 和 int64 转换为 string
 	switch tp {
-	case "string":
+	case "string", "uint64", "int64":
 		return "string", true
-	case "int", "int8", "int16", "int32", "int64", "uint", "uint8", "uint16", "uint32", "uint64":
+	case "int", "int8", "int16", "int32", "uint", "uint8", "uint16", "uint32":
 		return "number", true
 	case "float", "float32", "float64":
 		return "number", true
