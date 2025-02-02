@@ -136,7 +136,7 @@ func writeType(writer io.Writer, tp spec.Type) error {
 
 	// 为所有接口添加索引签名，使类型更灵活
 	writeIndent(writer, 2)
-	fmt.Fprintf(writer, "[key: string]: any;\n")
+	// fmt.Fprintf(writer, "[key: string]: any;\n")
 	writeIndent(writer, 1)
 	fmt.Fprintf(writer, "}\n\n")
 	return genParamsTypesIfNeed(writer, tp)
