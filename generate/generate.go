@@ -36,6 +36,8 @@ const (
 declare namespace API {
 {{.componentTypes}}
 }
+
+export { API };
 `
 )
 
